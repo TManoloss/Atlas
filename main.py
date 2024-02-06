@@ -47,7 +47,7 @@ parser.add_argument(
 parser.add_argument(
     "-r", "--samplerate", type=int, help="sampling rate")
 parser.add_argument(
-    "-m", "--model", type=str, help="language model; e.g. en-us, fr, nl; default is en-us")
+    "-m", "--model", type=str, help="language model; e.g. pt, fr, nl; default is pt")
 args = parser.parse_args(remaining)
 
 try:
@@ -57,7 +57,7 @@ try:
         args.samplerate = int(device_info["default_samplerate"])
         
     if args.model is None:
-        model = Model(lang="en-us")
+        model = Model(lang="pt")
     else:
         model = Model(lang=args.model)
 
