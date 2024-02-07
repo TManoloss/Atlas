@@ -8,4 +8,4 @@
     Técnologias:
          Reconhecimento de voz.(google para reconhecimento online, Vosk para reconhecimento offline)
          Síntese de voz. (pyttsx3)
-         IA. Commands, NLU
+         IA. Commands, NLU (classificação de texto )

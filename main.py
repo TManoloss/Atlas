@@ -102,9 +102,9 @@ try:
                     speak(core.SystemInfo.get_time())
 
                 if text == "quem é você":
-                    speak("Olá sou Atlas e estou aqui para ajudar você. Como posso ajudar?")
+                    speak("Olá sou Atlas, e estou aqui para ajudar você. Como posso ajudar?")
                 
-                if text == "tchau":
+                if text == "ate mais" or text == "tchau" or text == "até mais" or text == "até mais atlas" or text == "até logo" or text == "até logo atlas":
                     speak("Até logo")
                     break
 except KeyboardInterrupt:
