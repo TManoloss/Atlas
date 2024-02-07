@@ -9,6 +9,7 @@ import queue
 import sys
 import sounddevice as sd
 import json
+import core
 
 from vosk import Model, KaldiRecognizer
 import pyttsx3
@@ -95,12 +96,17 @@ try:
                 if result is not None:
                     text = result['text']
                     print(text)
-                    speak(text)
+                   
                 
-                if result['text'] == "olá":
-                    speak("Olá, como posso ajudar?")
-                print(result)
-          
+                if text == "que horas são":
+                    speak(core.SystemInfo.get_time())
+
+                if text == "quem é você":
+                    speak("Olá sou Atlas e estou aqui para ajudar você. Como posso ajudar?")
+                
+                if text == "tchau":
+                    speak("Até logo")
+                    break
 except KeyboardInterrupt:
     print("\nDone")
     parser.exit(0)
