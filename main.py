@@ -11,6 +11,7 @@ import sounddevice as sd
 import json
 import core
 
+
 from vosk import Model, KaldiRecognizer
 import pyttsx3
 #sintetizador de voz 
