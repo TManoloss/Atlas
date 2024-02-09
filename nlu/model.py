@@ -18,7 +18,7 @@ for command in data['commands']:
 
 
 
-max_seq = max([len(bytes(x.encoding('utf-8'))) for x in inputs])
+max_seq = max([len(bytes(x.encode('utf-8'))) for x in inputs])
 
 print('Maior sequência:', max_seq)
 
@@ -28,10 +28,9 @@ print('Maior sequência:', max_seq)
 # input data one-hot encoding
 
 input_data = np.zeros((len(inputs), max_seq, 256), dtype='float32')
-
 for i, inp in enumerate(inputs):
-    for k, ch in enumerate(bytes(inp.encoding('utf-8'))):
-        input_data[i, k, int[ch]] = 1
+    for k, ch in enumerate(bytes(inp.encode('utf-8'))):
+        input_data[i, k, int(ch)] = 1.0
 
 #Input data sparce
 
@@ -68,7 +67,6 @@ model.add(LSTM(128))
 model.add(Dense(len(output_data), activation='softmax'))
 
 model.compile(optimizer='adam',loss='categorical_crossentropy',  metrics=['acc'])
-model.summary()
 
 model.fit(input_data, output_data, epochs=16)
 
