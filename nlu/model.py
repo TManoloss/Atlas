@@ -68,9 +68,28 @@ model.add(Dense(len(output_data), activation='softmax'))
 
 model.compile(optimizer='adam',loss='categorical_crossentropy',  metrics=['acc'])
 
-model.fit(input_data, output_data, epochs=16)
+model.fit(input_data, output_data, epochs=128)
+
+#Classificar texto em uma entidade
+def classify(text):
+    #criar um arry de entrada
+    x = np.zeros((1, max_seq, 256), dtype='float32')
+    
+    #preencher o array com os dados do texto
+    for k, ch in enumerate(bytes(text.encode('utf-8'))):
+        x[0, k, int(ch)] = 1.0
+      #fazer a previsao  
+    out = model.predict(x)
+    idx = out.argmax()
+    print(idx2labels[idx])
+
+while True:
+    text = input('Digite algo: ')
+    classify(text)
+ 
 
 '''    
 print(inputs)
 print(outputs)
 '''
+
