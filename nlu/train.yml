@@ -1,4 +1,13 @@
 commands:
+  - command: 
+    input: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    entity: none
+    action: none
+  #greeting
+  - command:
+    input: oi
+    entity: greeting
+    action: greet
  #hora
   - command:
     input: que horas sao 

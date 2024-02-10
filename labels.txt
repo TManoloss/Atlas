@@ -1,0 +1,6 @@
+none\none
+greeting\greet
+time\getTime
+date\getDate
+open\None
+weather\getWeather
