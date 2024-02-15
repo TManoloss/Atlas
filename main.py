@@ -10,6 +10,7 @@ import sys
 import sounddevice as sd
 import json
 import core
+from nlu.classifier import classify
 
 
 from vosk import Model, KaldiRecognizer
@@ -96,18 +97,29 @@ try:
                 
                 if result is not None:
                     text = result['text']
-                    print(text)
-                   
+                    
+                    
+                    entity = classify(text)  
+                    if text == '':
+                        entity = ''
+                print('Text: {} Entity: {}'.format(text, entity))
                 
-                if text == "que horas são":
+                if entity == 'time\getTime':
                     speak(core.SystemInfo.get_time())
-
+                elif entity == '':
+                    speak('')    
+                elif entity == 'date\getDate':
+                    speak(core.SystemInfo.get_date())
+                '''
+                elif entity == 'close\close':
+                    speak("até mais tarde!")
+                    #break
+                '''
+                
                 if text == "quem é você":
                     speak("Olá sou Atlas, e estou aqui para ajudar você. Como posso ajudar?")
                 
-                if text == "ate mais" or text == "tchau" or text == "até mais" or text == "até mais atlas" or text == "até logo" or text == "até logo atlas":
-                    speak("Até logo")
-                    break
+           
 except KeyboardInterrupt:
     print("\nDone")
     parser.exit(0)
