@@ -1,6 +1,6 @@
-none\none
-greeting\greet
-time\getTime
 date\getDate
-open\None
 weather\getWeather
+greeting\greet
+none\none
+open\None
+time\getTime

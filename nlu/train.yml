@@ -17,6 +17,7 @@ commands:
     input: me diga as horas
     entity: time  
     action: getTime
+   
   #data
   - command:
     input: que dia e hoje
