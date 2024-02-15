@@ -40,10 +40,11 @@ commands:
     action: getWeather  
   #Open
   - command:
-    input: abrir o google
+    input: abrir bloco de notas
     entity: open  
-    action: 
+    action: getnotePad
   - command:
-    input: abra o google
+    input: abra bloco de notas
     entity: open  
-    action: 
+    action: getnotePad
+ 

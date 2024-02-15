@@ -1,6 +1,6 @@
+time\getTime
 weather\getWeather
 greeting\greet
-time\getTime
+open\getnotePad
 date\getDate
-open\None
 none\none

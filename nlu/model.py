@@ -71,7 +71,7 @@ model.add(Dense(len(output_data), activation='softmax'))
 
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['acc'])
 
-model.fit(input_data, output_data, epochs=256)
+model.fit(input_data, output_data, epochs=124)
 
 # Salvar model
 model.save('model.h5')
