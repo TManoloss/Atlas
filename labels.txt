@@ -1,6 +1,6 @@
-time\getTime
-weather\getWeather
-greeting\greet
-open\getnotePad
-date\getDate
-none\none
+weather|getWeather
+time|getTime
+none|none
+date|getDate
+open|getnotePad
+greeting|greet

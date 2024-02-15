@@ -35,17 +35,20 @@ def evaluete(text):
         entity = ''
                 
                 
-    if entity == 'time\getTime':
+    if entity == 'time|getTime':
         speak(core.SystemInfo.get_time())
     elif entity == '':
         speak('')    
-    elif entity == 'date\getDate':
+    elif entity == 'date|getDate':
         speak(core.SystemInfo.get_date())
         
     #Abrir programas
-    elif entity == 'open\getnotePad':
+    elif entity == 'open|getnotePad':
         speak('Abrindo o bloco de notas...')
         os.system('notepad')
+    elif entity == 'open|getGoogle':
+        speak('Abrindo o Gu gol...')
+        os.system('start https://www.google.com')
 
     print('Text: {} Entity: {}'.format(text, entity))
 
@@ -123,7 +126,7 @@ try:
                     
                    
                 '''
-                elif entity == 'close\close':
+                elif entity == 'close|close':
                     speak("até mais tarde!")
                     #break
                 '''
