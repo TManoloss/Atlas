@@ -1,6 +1,6 @@
-weather|getWeather
 time|getTime
+open|getGoogle
 none|none
+greeting|greet
 date|getDate
 open|getnotePad
-greeting|greet

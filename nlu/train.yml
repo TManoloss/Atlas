@@ -17,7 +17,6 @@ commands:
     input: me diga as horas
     entity: time  
     action: getTime
-   
   #data
   - command:
     input: que dia e hoje
@@ -27,22 +26,21 @@ commands:
     input: me diga a data
     entity: date  
     action: getDate
-  #clima
-  - command:
-    input: previsao do tempo
-    entity: weather  
-    action: getWeather
-  - command:
-    input: como esta o tempo
-    entity: weather  
-    action: getWeather  
   #Open
   - command:
     input: abrir bloco de notas
     entity: open  
     action: getnotePad
   - command:
-    input: abra bloco de notas
+    input: abrir bloco de notas
     entity: open  
     action: getnotePad
+  - command:
+    input: abrir navegador
+    entity: open  
+    action: getGoogle
+  - command:
+    input: abrir navegador
+    entity: open  
+    action: getGoogle
  

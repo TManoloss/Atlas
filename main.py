@@ -45,7 +45,7 @@ def evaluete(text):
     #Abrir programas
     elif entity == 'open|getnotePad':
         speak('Abrindo o bloco de notas...')
-        os.system('start https://www.google.com')
+        os.system('notepad')
     elif entity == 'open|getGoogle':
         speak('Abrindo o Gu gol...')
         os.system('start https://www.google.com')

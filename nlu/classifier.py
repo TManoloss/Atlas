@@ -25,8 +25,7 @@ def classify(text):
     out = model.predict(x)
     idx = out.argmax()
     return idx2label[idx]
-'''
+
 while True:
     text = input('Digite algo: ')
     print(classify(text))
-'''
