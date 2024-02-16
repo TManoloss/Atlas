@@ -8,8 +8,6 @@ commands:
     input: oi
     entity: greeting
     action: greet
-  
- 
  #hora
   - command:
     input: que horas sao 
