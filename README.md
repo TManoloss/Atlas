@@ -11,4 +11,4 @@
          IA. Commands, NLU (classificação de texto )
     
     Funçõe do Assistente:
-         abri programas
+         abrir programas

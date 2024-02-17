@@ -1,8 +1,4 @@
 commands:
-  - command: 
-    input: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-    entity: none
-    action: none
   #greeting
   - command:
     input: oi
@@ -10,37 +6,41 @@ commands:
     action: greet
  #hora
   - command:
-    input: que horas sao 
+    input: horas 
     entity: time  
     action: getTime
     -command:
-    input: me diga as horas
+    input: horas
     entity: time  
     action: getTime
   #data
   - command:
-    input: que dia e hoje
+    input: dia
     entity: date  
     action: getDate
   - command:
-    input: me diga a data
+    input: data
+    entity: date  
+    action: getDate
+  - command:
+    input: hoje
     entity: date  
     action: getDate
   #Open
   - command:
-    input: abrir bloco de notas
+    input: bloco de notas
     entity: open  
     action: getnotePad
   - command:
-    input: abrir bloco de notas
+    input: bloco de notas
     entity: open  
     action: getnotePad
   - command:
-    input: abrir navegador
+    input: navegador
     entity: open  
     action: getGoogle
   - command:
-    input: abrir navegador
+    input: navegador
     entity: open  
     action: getGoogle
  

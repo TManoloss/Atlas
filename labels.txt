@@ -1,6 +1,5 @@
-time|getTime
-open|getGoogle
-none|none
 greeting|greet
 date|getDate
 open|getnotePad
+time|getTime
+open|getGoogle

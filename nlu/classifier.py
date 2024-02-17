@@ -14,8 +14,9 @@ for k, label in enumerate(labels):
 
 # Classificar texto em um entidade
 def classify(text):
-    # Criar um array de entrada
-    x = np.zeros((1, 40, 256), dtype='float32')
+    # Criar um array de entrada com caracteres ilimitados
+    max_chars = len(text)
+    x = np.zeros((1, max_chars, 256), dtype='float32')
 
     # Preencher o array com dados do texto.
     for k, ch in enumerate(bytes(text.encode('utf-8'))):
