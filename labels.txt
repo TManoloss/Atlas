@@ -1,5 +1,9 @@
+close|getnotePad
 greeting|greet
-date|getDate
-open|getnotePad
+none|getGoogle
 time|getTime
+none|getnotePad
+date|getDate
 open|getGoogle
+fechar|getGoogle
+open|getnotePad
