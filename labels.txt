@@ -1,0 +1,9 @@
+close|getnotePad
+greeting|greet
+none|getGoogle
+time|getTime
+none|getnotePad
+date|getDate
+open|getGoogle
+fechar|getGoogle
+open|getnotePad

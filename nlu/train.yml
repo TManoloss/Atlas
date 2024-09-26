@@ -1,0 +1,69 @@
+commands:
+  #greeting
+  - command:
+    input: oi
+    entity: greeting
+    action: greet
+ #hora
+  - command:
+    input: hora
+    entity: time  
+    action: getTime
+  - command:
+    input: horas
+    entity: time  
+    action: getTime
+  - command:
+    input: que horas sao
+    entity: time  
+    action: getTime
+    
+  #data
+  - command:
+    input: dia
+    entity: date  
+    action: getDate
+  - command:
+    input: data
+    entity: date  
+    action: getDate
+  - command:
+    input: hoje
+    entity: date  
+    action: getDate
+  - command:
+    input: qual a data de hoje
+    entity: date  
+    action: getDate
+  - command:
+    input: que dia e hoje
+    entity: date  
+    action: getDate
+  #Open
+  - command:
+    input: bloco de notas
+    entity: none  
+    action: getnotePad
+  - command:
+    input:  abrir bloco de notas
+    entity: open  
+    action: getnotePad
+  - command:
+    input: navegador
+    entity: none  
+    action: getGoogle
+  - command:
+    input: abrir o navegador
+    entity: open  
+    action: getGoogle
+  #Close
+  - command:
+    input: fechar bloco de notas
+    entity: close  
+    action: getnotePad
+  - command:
+    input: fechar o navegador
+    entity: close  
+    action: getGoogle
+
+ 

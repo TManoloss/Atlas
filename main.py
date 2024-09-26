@@ -5,11 +5,52 @@
 # For more help run: `python test_microphone.py -h`
 
 import argparse
+import os
 import queue
 import sys
 import sounddevice as sd
+import json
+import core
+from nlu.classifier import classify
+
 
 from vosk import Model, KaldiRecognizer
+import pyttsx3
+#sintetizador de voz 
+engine = pyttsx3.init()
+
+voices = engine.getProperty('voices')  
+engine.setProperty('voice', voices[0].id)
+
+
+
+def speak(text):
+    engine.say(text)
+    engine.runAndWait()
+    
+def evaluete(text):
+     #Reconhecer entidade do texto
+    entity = classify(text)  
+    if text == '':
+        entity = ''
+                
+                
+    if entity == 'time|getTime':
+        speak(core.SystemInfo.get_time())
+    elif entity == '':
+        speak('')    
+    elif entity == 'date|getDate':
+        speak(core.SystemInfo.get_date())
+        
+    #Abrir programas
+    elif entity == 'open|getnotePad':
+        speak('Abrindo o bloco de notas...')
+        os.system('notepad')
+    elif entity == 'open|getGoogle':
+        speak('Abrindo o Gu gol...')
+        os.system('start https://www.google.com')
+
+    print('Text: {} Entity: {}'.format(text, entity))
 
 q = queue.Queue()
 
@@ -76,12 +117,25 @@ try:
         while True:
             data = q.get()
             if rec.AcceptWaveform(data):
-                print(rec.Result())
-            else:
-                print(rec.PartialResult())
-            if dump_fn is not None:
-                dump_fn.write(data)
-
+                result = rec.Result()
+                result = json.loads(result)
+                
+                if result is not None:
+                    text = result['text']
+                    evaluete(text)
+                    
+                   
+                '''
+                elif entity == 'close|close':
+                    speak("até mais tarde!")
+                    #break
+                '''
+                
+                if text == "quem é você":
+                    speak("Olá sou Atlas, e estou aqui para ajudar você. Como posso ajudar?")
+                
+                
+           
 except KeyboardInterrupt:
     print("\nDone")
     parser.exit(0)
